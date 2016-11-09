@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <title>Interaction Engine - Chairbot</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Chairbot</title>
+
+        <script src="/socket.io/socket.io.js"></script>
+	<script src="client.js"></script>
+
+        </head>
+   	<body>
+        <body bgcolor="#E6E6FA">
+	<p>Alligator motion control</p>
+
+
+
+<script>	
+	function gameLoop() {
+   	/* insert conditional here */	
+	FORWARD();
+ 	setTimeout(gameLoop, 100);
+	}
+
+gameLoop();
+
+</body>
+</html>

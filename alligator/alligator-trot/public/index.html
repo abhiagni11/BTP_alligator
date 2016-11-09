@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <title>Interaction Engine - Chairbot</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Chairbot</title>
+
+        <script src="/socket.io/socket.io.js"></script>
+	<script src="client.js"></script>
+
+        </head>
+   	<body>
+        <body bgcolor="#E6E6FA">
+	<p>Alligator motion control</p>
+
+	<div>
+	<label for="pwm_range">Amplitude:</label>
+	<input type="range" name="pwm_range" min="0" max="9" onchange="updateTextInput(this.value, 'pwm');">
+	<input type="text" id="pwm" value="0">
+	</div>
+
+
+<script>
+	//window.addEventListener("keydown", dealWithKeyboarddown, false);
+	//window.addEventListener("keypress", dealWithKeyboardpress, false);
+	//window.addEventListener("keyup", dealWithKeyboardup, false);
+
+
+	var map = {}; // You could also use an array
+
+	document.addEventListener('keydown', function(e) {
+   	map[e.keyCode] = true;
+	}, false);
+	document.addEventListener('keypress', function(e) {
+   	map[e.keyCode] = true;
+	}, false);
+	document.addEventListener('keyup', function(e) {
+  	map[e.keyCode] = false;
+	}, false);
+	
+	function gameLoop() {
+		
+   	/* insert conditional here */
+		if(map["38"]){
+	console.log('FF');
+		   FF();
+		}else if(map["49"]){
+	console.log('k01');
+		   K1();
+		}else if(map["50"]){
+	console.log('k02');
+		   K2();
+		}else if(map["51"]){
+	console.log('k03');
+		   K3();
+		}else if(map["52"]){
+	console.log('k04');
+		   K4();
+		}else if(map["53"]){
+	console.log('k05');
+		   K5();
+		}else if(map["54"]){
+	console.log('k06');
+		   K6();
+		}else if(map["55"]){
+	console.log('k07');
+		   K7();
+		}else if(map["56"]){
+	console.log('k08');
+		   K8();
+		}else if(map["57"]){
+	console.log('k09');
+		   K9();
+		}else if(map["81"]){
+	console.log('kq');
+		   Q1();
+		}else if(map["87"]){
+	console.log('kw');
+		   Q2();
+		}else if(map["69"]){
+	console.log('ke');
+		   Q3();
+		}else if(map["82"]){
+	console.log('kr');
+		   Q4();
+		}else if(map["84"]){
+	console.log('kt');
+		   Q5();
+		}else if(map["89"]){
+	console.log('ky');
+		   Q6();
+		}else if(map["85"]){
+	console.log('ku');
+		   Q7();
+		}else if(map["73"]){
+	console.log('ki');
+		   Q8();
+		}else if(map["79"]){
+	console.log('ko');
+		   Q9();
+		}else{ /*if((!(map["40"]))||(!(map["50"]))||(!(map["51"]))||(!(map["52"]))||(!(map["53"]))||(!(map["54"]))||(!(map["55"]))||(!(map["56"]))||(!(map["57"]))||(!(map["81"]))||(!(map["87"]))||(!(map["69"]))||(!(map["82"]))||(!(map["84"]))||(!(map["89"]))||(!(map["85"]))||(!(map["73"]))||(!(map["79"]))||(!(map["49"]))){
+	console.log('ffff');*/
+		   FORWARD();
+		}
+ 		setTimeout(gameLoop, 50);
+	}
+
+gameLoop();
+</script>
+</body>
+</html>
