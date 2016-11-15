@@ -336,7 +336,6 @@ serial.on('data',function(data) {
 tame = (Date.now()/1000);
 lame = tame.toString();
 	///////////////////////////////	
-
 	ardmsg = data.toString();
 	//fs.writeFile('message.txt', "   - { TIME HERE:  ", function (err) {
         //if (err) throw err;
@@ -350,7 +349,6 @@ lame = tame.toString();
   	console.log("TIME HERE: ");
   	console.log(lame);
 });
-
 server.listen(serverPort, function() {
     console.log('listening on *:%s', serverPort);
 });
