@@ -5,7 +5,7 @@ import datetime
 import calendar
 import sys
 
-k=1
+k=2
 f = open("data.txt", "w")
 ttt = time.time()
 f.write( "TIME START : "  ) 
