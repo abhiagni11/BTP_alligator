@@ -31,7 +31,7 @@ io.on('connect', function(socket) {
 
 	console.log('TIME START:');
 	console.log(Date.now()/1000);
-
+ 
     	socket.on('error', function (err) { 
 	console.error(err.stack); // TODO, cleanup 
 	});
@@ -39,7 +39,7 @@ io.on('connect', function(socket) {
     // if you get the 'Stop' msg, send an 's' to the arduino
     	socket.on('FORWARD', function() {
         //console.log('Stops');
-        //serial.write('f');
+        //serial.write('f'); 
 	console.log('TIME HERE-ARD:');
 	console.log(Date.now()/1000);
 	
