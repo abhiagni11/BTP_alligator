@@ -8,10 +8,10 @@ Servo knee1;
 Servo knee2;
 Servo knee3;
 Servo knee4;
-//Servo tail1;
+Servo tail1;
 Servo middle;
 Servo head;
-//Servo tail2;
+Servo tail2;
 
 int pos=0;
 int hipPoss=120;  // variables to control input angles
@@ -44,8 +44,8 @@ void setup()
     hip4.attach(11);
     knee3.attach(A2);
     knee4.attach(12);
-    //tail1.attach(A4);
-    //tail2.attach(A5);
+    tail1.attach(A4);
+    tail2.attach(A5);
 
     middle.write(90);
     head.write(120);
