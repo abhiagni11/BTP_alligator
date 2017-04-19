@@ -33,19 +33,21 @@ float cycle=0;
 void setup()
 {
     
+   
     knee1.attach(2);
-    knee2.attach(7);
-    hip1.attach(4);
-    hip2.attach(5);
-    middle.attach(6);
+    knee2.attach(5);
+    hip1.attach(6);
+    hip2.attach(7);
+    middle.attach(4);
     head.attach(3);
-    
+
     hip3.attach(A3);
     hip4.attach(11);
     knee3.attach(A2);
     knee4.attach(12);
     tail1.attach(A4);
     tail2.attach(A5);
+
 
     middle.write(90);
     head.write(120);
